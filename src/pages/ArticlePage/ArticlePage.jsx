@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -25,6 +25,7 @@ export const ArticlePage = () => {
              <img src={art.imageUrl} alt="news logo" width="240" />
             <h2>{art.title}</h2>
             <p>{art.summary}</p>
+            <Link to={"/"}>Back to homepage</Link>
         </>
     )
 }

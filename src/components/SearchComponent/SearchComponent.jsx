@@ -1,10 +1,6 @@
 import { useState } from "react"
 import axios from "axios";
 
-
-
-
-
 axios.defaults.baseURL = "https://api.spaceflightnewsapi.net/v3/articles"
 
 export const SearchComponent = ({getArticles}) => {
@@ -21,7 +17,6 @@ export const SearchComponent = ({getArticles}) => {
         return queryParams
     }
 
-
     const onSumbitHandler = async (e) => {
         e.preventDefault();
 
@@ -32,6 +27,7 @@ export const SearchComponent = ({getArticles}) => {
         } catch (error) {
             console.log(error.message)
         }
+
         setQuery("")
     }
 
